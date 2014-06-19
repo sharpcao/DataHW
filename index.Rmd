@@ -31,7 +31,6 @@ This app is built to plot Shanghai Index (SSEC)
 ## Code
 ```{r message=FALSE, results='hide',warning=FALSE}
 library(quantmod)
-library(quantmod)
 getSymbols('^SSEC')
 DT <- data.frame(tm = time(SSEC),Close=as.numeric(SSEC$SSEC.Close))
 DT$year <- format(DT$tm,"%Y")
@@ -39,11 +38,6 @@ DT$ym <- format(DT$tm,"%Y-%m")
 
 ```
 
----
-## Line Plot
-```{r }
-plot(Close~tm,data = DT,type="l",pch=19,log="y")
-```
 
 ---
 ## Box Plot 

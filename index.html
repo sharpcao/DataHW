@@ -74,7 +74,6 @@
   </hgroup>
   <article data-timings="">
     <pre><code class="r">library(quantmod)
-library(quantmod)
 getSymbols(&#39;^SSEC&#39;)
 DT &lt;- data.frame(tm = time(SSEC),Close=as.numeric(SSEC$SSEC.Close))
 DT$year &lt;- format(DT$tm,&quot;%Y&quot;)
@@ -87,27 +86,13 @@ DT$ym &lt;- format(DT$tm,&quot;%Y-%m&quot;)
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Line Plot</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">plot(Close~tm,data = DT,type=&quot;l&quot;,pch=19,log=&quot;y&quot;)
-</code></pre>
-
-<p><img src="figure/unnamed-chunk-2.png" alt="plot of chunk unnamed-chunk-2"> </p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-5" style="background:;">
-  <hgroup>
     <h2>Box Plot</h2>
   </hgroup>
   <article data-timings="">
     <pre><code class="r">boxplot(Close~year,data = DT,log=&quot;y&quot;)
 </code></pre>
 
-<p><img src="figure/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3"> </p>
+<p><img src="figure/unnamed-chunk-2.png" alt="plot of chunk unnamed-chunk-2"> </p>
 
   </article>
   <!-- Presenter Notes -->
@@ -137,14 +122,8 @@ DT$ym &lt;- format(DT$tm,&quot;%Y-%m&quot;)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Line Plot'>
+        data-slide=4 title='Box Plot'>
          4
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Box Plot'>
-         5
       </a>
     </li>
   </ul>
